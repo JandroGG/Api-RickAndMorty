@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick And Morty</title>
+    <link rel="stylesheet" href="stylesNew.css"/>
+</head>
+<body>
+    <section class="cabecera" id="cabecera">
+        <img src="imgPrin.png" class="imagen-principal">
+        <div class="filtro">
+            <button class="btn-filtro" id="Alive">Vivos</button>
+            <button class="btn-filtro" id="Dead">Muertos</button>
+            <button class="btn-filtro" id="Unknow">Nosesabe</button>
+            <button class="btn-filtro" id="todos">Todos</button>
+            <span class="cant-char-label" id="cant-char-label">Cantidad de Personajes:</span>
+            <span class="cant-char-num" id="cant-char-num">Cantidad</span>
+        </div>
+    </section>
+
+    <scroll-container class="contenedor-scroll" id="contenedor-scroll">
+    </scroll-container>
+
+    <nav id="paginacion">
+        <button class="pg-anterior normal" id="pg-anterior">prev</button>
+        <button class="pagina activa" id="1"><a href="#pagina-1">1</a></button>
+        <button class="pagina normal" id="2"><a href="#pagina-2">2</a></button>
+        <button class="pagina normal" id="3"><a href="#pagina-3">3</a></button>
+        <button class="pagina normal" id="4"><a href="#pagina-4">4</a></button>
+        <button class="pagina normal" id="5"><a href="#pagina-5">5</a></button>
+        <button class="pagina normal" id="6"><a href="#pagina-6">6</a></button>
+        <button class="pagina normal" id="7"><a href="#pagina-7">7</a></button>
+        <button class="pagina normal" id="8"><a href="#pagina-8">8</a></button>
+        <button class="pagina activa" id="9"><a href="#pagina-9">9</a></button>
+        <button class="pagina normal" id="10"><a href="#pagina-10">10</a></button>
+        <button class="pg-siguiente normal" id="pg-siguiente">sig</button>
+    </nav>
+
+
+
+    <!-- Plantillas -->
+
+    <template id="template-carnet">
+        <figure class="carnet" id="carnet-0" style="cursor: pointer;">
+            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" class="img-carnet hijo-carnet">
+            <figcaption class="info-char">
+                <span class="Nombre">Rick Sanchez</span>
+                <span class="especie">Human</span>
+            </figcaption>
+            <div class="identificador">1</div>
+            <div class="estado"></div>
+        </figure>
+    </template>
+
+    <template id="template-tooltip">
+
+        <div class="tooltip-content">
+            <span class="close-tooltip">X</span>
+            <div class="tooltip-img-info">
+                <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" class="img-tooltip">
+                <span class="tooltip-text" id="nombre-personaje">Rick Sanchez</span>                
+                <span class="tooltip-text" id="estado-personaje">vivo</span>                
+                <span class="tooltip-text" id="genero-personaje">masculino</span>                
+                <span class="tooltip-text" id="origen-personaje">origen</span>                
+                <span class="tooltip-text" id="especie-personaje">humano</span>
+                <span class="tooltip-text" id="id-personaje">1</span>
+            </div>
+        </div>
+    </template>
+
+    <!-- <script src="app2.js"></script> -->
+    <script src="appNew.js"></script>
+</body>
+</html>

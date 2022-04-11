@@ -1,0 +1,204 @@
+body{
+    background-color:darkslategrey;
+    text-align: center;
+    margin: auto;
+}
+/* *******************--Cabecera--******************** */
+.cabecera{
+    display: grid;
+    grid-template-columns: 30% 20% 30%;
+    justify-content: center;
+    background-color:rgb(31, 51, 51);
+    height: fit-content;
+}
+
+    .imagen-principal{
+        width: 90%;
+        height: 70%;
+    }
+
+
+
+    .filtro{
+        display: grid;
+        grid-template-areas:
+          'header1 header2 header3 header4'
+          'char-label char-label char-label char-label'
+          'char-num char-num char-num char-num';
+        /* gap: 10px; */
+        padding: 5%;
+    }
+
+    .btn-filtro{
+        width: fit-content;
+        height: fit-content;
+        padding: 3px;
+        border: black solid 1px;
+        border-radius: 4px;
+    }
+
+    #Alive{
+        grid-area: header1;
+        background-color: greenyellow;
+    }
+    
+    #Dead{
+        grid-area: header2;
+        background-color: red;
+    }
+    
+    #Unknow{
+        grid-area: header3;
+        background-color: gray;
+    }
+    
+    #todos{
+        grid-area: header4;
+        background-color: blue;
+    }
+
+    #cant-char-label {
+        grid-area: char-label;
+        text-align: center;
+        background-color: rgb(141, 233, 233);
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+    #cant-char-num { 
+        grid-area: char-num;
+        text-align: center;
+        background-color: rgb(141, 233, 233);
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+        /* ******************************************************** */
+
+.tooltip-content{
+    margin-top: -5%;
+    margin-left: 10%;
+    position: fixed;
+    display: inline-block;
+    border: 3px solid black;
+    background-color:  rgb(141, 233, 233);
+    width: 22%;
+    height: 70%;
+    border-radius: 5px;
+    font-size: 110%;
+    padding: 1% 2% 1% 2%;
+    z-index: 1;
+    box-shadow: 10px 10px 4px rgba(0, 0, 0, .80); 
+}
+  
+.tooltip-content .tooltip-text{
+    display:flex;
+}
+
+.tooltip-content .tooltip-img-info{
+    border: black solid 1px;
+    border-radius: 5px;
+}
+
+.tooltip-content .tooltip-img-info .img-tooltip{
+    width: 100%;
+    height: 100%
+}
+
+
+.tooltip-content .close-tooltip{
+    position:absolute;
+    width: 5%;
+    height: 5%;
+
+    margin-left: 51%;
+    margin-top: -7%;
+    background-color: rgba(141, 233, 233, .70);
+    border: black solid 1px;
+    border-radius: 12%;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, .70); 
+    padding: 1%;
+    cursor: pointer;
+    font-size: 90%;
+}
+
+body scroll-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    border: 2px solid black;
+    border-radius: 6px;
+
+    margin: 1% auto 1% auto;
+    width: 60%;
+    height: 550px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+    scroll-page {
+        margin-top: 1%;
+        display: grid;
+        grid-template-columns: 18% 18% 18% 18% 18%;
+        grid-template-rows: 33% 33% 33%;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 2%;
+    }
+
+        .carnet{
+            margin-left: 1px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            background-color: cornsilk;
+            width: 99%;
+            height: 100%;
+            border: solid 2px black;
+            box-shadow: 5px 5px 2px rgba(0, 0, 0, .80); 
+            border-radius: 4%;
+        
+        }
+            .img-carnet{
+                border-top-left-radius: 4%;
+                border-top-right-radius: 4%;
+                height: 70%;
+            }
+            
+            .info-char{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+            }
+                .Nombre{
+                    font-size: 100%;
+                    font-weight: 900;
+                    color: blue;
+                } 
+            
+            .identificador{
+                position:absolute;
+                z-index: 1;
+                background-color:rgba(141, 233, 233, 0.8);
+                padding:1%;
+                margin-left: 5%;
+                margin-top: 1%;
+                font-size: 80%;
+            }
+            
+            .estado{
+                position:absolute;
+                z-index: 1;
+                background-color: rgb(88, 84, 84);
+                width: 15%;
+                height: 13%;
+                margin-left: 80%;
+                margin-top: 2%;
+                border-radius: 100%;
+            }
+
+
+
